@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>
+Posts Display
+</title>
+</head>
+<body>
+{%if check=="f"%}
+<div>
+<p>Unauthorized User</p>
+</div>
+<button onclick="location.href='/';">Home Page</button>
+{%else%}
+<div>Course: {{coursename}}</div>
+<br>
+<table border=1>
+<tr>
+<th>Post id</th>
+<th>Topic</th>
+<th>Content</th>
+<th>User</th>
+<th>Post time</th>
+</tr>
+{%for p,t,c,u,pt in posts%}
+<tr>
+<td><a href='/singlepost?pid={{p}}'>{{p}}</a></td>
+<td>{{t}}</td>
+<td>{{c}}</td>
+<td>{{u}}</td>
+<td>{{pt}}</td>
+</tr>
+{%endfor%}
+</table>
+{%endif%}
+</body>
+</html>

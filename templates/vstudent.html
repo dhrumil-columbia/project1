@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>
+View Students
+</title>
+</head>
+<body>
+**This is for Instructors only**
+<form action="/vstudenthandle" method="POST">
+Login id<input type="text" name="user"/>
+<br><br>
+Password<input type="password" name="password"/>
+<br><br>
+<select name="course">
+{%for course in courses%}
+<option value="{{course}}">{{course}}</option>
+{%endfor%}
+</select>
+<input type="submit"></input>
+</form>
+<br>
+<button onclick="location.href='/';">Home Page</button>
+
+</body>
+</html>

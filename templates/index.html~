@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>
+Index page
+</title>
+</head>
+<body>
+
+--------------Student Section---------
+<button type="button" onclick="location.href='/vpost';">View Posts</button>
+<br><br><br>
+<button type="button" onclick="location.href='/vannouncement';">View Announcements</button>
+<br><br><br>
+<button type="button" onclick="location.href='/cpost';">Create a Post</button>
+<br><br><br>
+--------------Instructor Section---------
+<button type="button" onclick="location.href='/mannouncement';">Make an announcement</button>
+<br><br><br>
+<button type="button" onclick="location.href='/vstudents';">View student list</button>
+</body>
+</html>

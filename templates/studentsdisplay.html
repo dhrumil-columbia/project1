@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>
+Posts Display
+</title>
+</head>
+<body>
+{%if check=="f"%}
+<div>
+<p>Unauthorized User</p>
+</div>
+<button onclick="location.href='/';">Home Page</button>
+{%elif check2=='f'%}
+<div>
+<p>Instructor not authorised for this course</p>
+</div>
+<button onclick="location.href='/';">Home Page</button>
+{%else%}
+<div>Course: {{coursename}}</div>
+<br>
+Students:
+<br>
+<ol>
+{%for s in students%}
+<li>{{s}}</li>
+{%endfor%}
+</ol>
+<br>
+<button onclick="location.href='/';">Home Page</button>
+
+{%endif%}
+</body>
+</html>

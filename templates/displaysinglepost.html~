@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>
+Posts Display
+</title>
+</head>
+<body>
+<div>Course: {{cname}}
+<br>
+Topic: {{topic}}
+<br>
+Content: {{content}}
+<br>
+Post Time: {{ptime}}
+<br>
+User: {{uname}}
+<br>
+</div>
+<table border=1>
+<tr>
+<th>Comment id</th>
+<th>Content</th>
+<th>Time</th>
+<th>User</th>
+</tr>
+{%for i,c,t,u in comments%}
+<tr>
+<td>{{i}}</td>
+<td>{{c}}</td>
+<td>{{t}}</td>
+<td>{{u}}</td>
+</tr>
+{%endfor%}
+</table>
+
+<br>
+<button onclick="location.href='/makecomment?pid={{pid}}&cname={{cname}}';">Home Page</button>
+
+<br>
+<button onclick="location.href='/';">Home Page</button>
+</body>
+</html>

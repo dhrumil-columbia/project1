@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>
+Announcement Display
+</title>
+</head>
+<body>
+{%if check=="f"%}
+<div>
+<p>Unauthorized User</p>
+</div>
+<button onclick="location.href='/';">Home Page</button>
+{%elif check2=="f"%}
+<div>
+<p>You are not the instructor for this course</p>
+</div>
+<button onclick="location.href='/';">Home Page</button>
+{%else%}
+<div>Course: {{coursename}}
+<br>
+Instructor Name: {{uname}}
+<br>
+</div>
+<table border=1>
+<tr>
+<th>Announcement id</th>
+<th>Content</th>
+<th>Time</th>
+</tr>
+{%for a,c,t in announcements%}
+<tr>
+<td>{{a}}</td>
+<td>{{c}}</td>
+<td>{{t}}</td>
+</tr>
+{%endfor%}
+</table>
+<br>
+<button onclick="location.href='/';">Home Page</button>
+{%endif%}
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>
+Post Display
+</title>
+</head>
+<body>
+{%if check=="f"%}
+<div>
+<p>Unauthorized User</p>
+</div>
+<button onclick="location.href='/';">Home Page</button>
+{%elif check2=="f"%}
+<div>
+<p>You are not registered for this course</p>
+</div>
+<button onclick="location.href='/';">Home Page</button>
+{%else%}
+<div>Course: {{cname}}
+<br>
+Topic: {{topic}}
+<br>
+Content: {{content}}
+<br>
+Post Time: {{ptime}}
+<br>
+User: {{uname}}
+<br>
+</div>
+<table border=1>
+<tr>
+<th>Comment id</th>
+<th>Content</th>
+<th>Time</th>
+<th>User</th>
+</tr>
+{%for i,c,t,u in comments%}
+<tr>
+<td>{{i}}</td>
+<td>{{c}}</td>
+<td>{{t}}</td>
+<td>{{u}}</td>
+</tr>
+{%endfor%}
+</table>
+<br>
+<button onclick="location.href='/makecomment?pid={{pid}}';">Add comment</button>
+
+<br>
+<button onclick="location.href='/';">Home Page</button>
+{%endif%}
+</body>
+</html>
